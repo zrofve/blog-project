@@ -5,11 +5,13 @@
     <h1>{{ post.title }}</h1>
     <p>{{ post.content }}</p>
     <hr>
-    <small class="pe-2">{{ post.created_at }}</small>
-    <div class="btn-group">
-        <a href="{% url 'post-update' post.pk %}" class="btn btn-sm btn-outline-secondary">Edit</a>
-        <a href="{% url 'post-delete' post.pk %}" class="btn btn-sm btn-outline-secondary">Delete</a>
-        <a href="{% url 'home' %}" class="btn btn-sm btn-outline-secondary">Home</a>
+    <div class="d-flex justify-content-between align-items-center">
+        <small class="pe-2">{{ post.created_at }}</small>
+        <div class="btn-group">
+            <a href="{% url 'post-update' post.pk %}" class="btn btn-sm btn-outline-secondary">Edit</a>
+            <a href="{% url 'post-delete' post.pk %}" class="btn btn-sm btn-outline-danger">Delete</a>
+            <a href="{% url 'home' %}" class="btn btn-sm btn-outline-primary">Home</a>
+        </div>
     </div>
 </div>
 {% endblock %}
