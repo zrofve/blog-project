@@ -29,7 +29,8 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     # "blog-project-production-89fb.up.railway.app",
-    "blog-project-production-5f38.up.railway.app",
+    "julzblog.up.railway.app",
+    "https://julzblog.up.railway.app",
 ]
 
 
@@ -69,7 +70,7 @@ MIDDLEWARE = [
 
 CSRF_TRUSTED_ORIGINS = [
     # "https://blog-project-production-89fb.up.railway.app",
-    "blog-project-production-5f38.up.railway.app",
+    "https://julzblog.up.railway.app",
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
