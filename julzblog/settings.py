@@ -63,6 +63,7 @@ MIDDLEWARE = [
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 ROOT_URLCONF = 'julzblog.urls'
 
 TEMPLATES = [
@@ -130,10 +131,10 @@ USE_TZ = True
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "static"
-STATICFILES_DIRS = [
-    BASE_DIR / "static",   # where your app-level static files live
-]
+STATIC_ROOT = BASE_DIR / "staticfiles"
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",   # where your app-level static files live
+# ]
 
 
 # Default primary key field type
