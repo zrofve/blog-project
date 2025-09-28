@@ -2,7 +2,13 @@
 
 {% block content %}
 <div class="content-section">
-    <h1 class="mb-4">New Post</h1>
+    <h1 class="mb-4">
+        {% if form.instance.pk %}
+            Edit Post
+        {% else %}
+            Create New Post
+        {% endif %}
+    </h1>
     <form method="POST">
         {% csrf_token %}
         {% for field in form %}
@@ -17,8 +23,8 @@
             </div>
         {% endfor %}
         <div>
-            <button type="submit" class="btn btn-primary">Save Post</button>
-            <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-outline-primary">Save Post</button>
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary">Cancel</a>
         </div>
     </form>
 </div>

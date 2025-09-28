@@ -19,10 +19,10 @@
             </h2>
             <p>{{ post.content }}</p>
             <div class="d-flex justify-content align-items-center">
-                <small>{{ post.created_at }}</small>
+                <small class="pe-2">{{ post.created_at }}</small>
                 <div class="btn-group">
-                    <a href="{% url 'post-update' post.pk %}" class="btn btn-small btn-online-secondary">Edit</a>
-                    <a href="{% url 'post-delete' post.pk %}" class="btn btn-small btn-online-danger">Delete</a>
+                    <a href="{% url 'post-update' post.pk %}" class="btn btn-sm btn-outline-secondary hover-bg">Edit</a>
+                    <a href="{% url 'post-delete' post.pk %}" class="btn btn-sm btn-outline-secondary hover-bg">Delete</a>
                 </div>
             </div>
         </div>
