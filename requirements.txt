@@ -1,0 +1,5 @@
+Django>=5.0,<6.0
+gunicorn
+psycopg2-binary   # if using Postgres
+whitenoise        # if serving static files
+djangorestframework   # if you’re using DRF
